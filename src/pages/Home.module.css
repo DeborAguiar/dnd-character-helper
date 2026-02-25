@@ -1,0 +1,90 @@
+.home {
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.subtitle a {
+  color: #60a5fa;
+}
+
+.subtitle a:hover {
+  color: #93c5fd;
+}
+
+.cards {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0 0 1rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.button,
+.buttonSecondary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.button {
+  background: #fbbf24;
+  color: #0f172a;
+}
+
+.button:hover {
+  background: #fcd34d;
+}
+
+.buttonSecondary {
+  background: rgba(71, 85, 105, 0.5);
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.buttonSecondary:hover {
+  background: rgba(100, 116, 139, 0.5);
+  color: #fff;
+}

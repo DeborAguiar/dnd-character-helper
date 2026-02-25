@@ -1,0 +1,230 @@
+.sheet {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.header h1 {
+  margin: 0 0 0.25rem;
+  color: #c9a227;
+  font-size: 1.75rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: #888;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.sheet section h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.abilities {
+  grid-column: 1 / -1;
+}
+
+.abilityGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+
+.abilityBox {
+  background: #1e1e2e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.abilityLabel {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+
+.abilityValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.abilityMod {
+  font-size: 0.9rem;
+  color: #c9a227;
+}
+
+.stats .statRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.hpRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hpRow input {
+  width: 4rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(30, 41, 59, 0.6);
+  color: #f1f5f9;
+}
+
+.hpRow .sep {
+  color: #666;
+}
+
+.hitDice {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.list ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.spellsByLevel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spellLevelGroup {
+  margin: 0;
+}
+
+.spellLevelGroup strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #fbbf24;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.spellLevelGroup ol.spellList {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.list ol.skillList {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.list ol.skillList li.skillProficient {
+  color: #fbbf24;
+}
+
+.list ol.skillList .skillBadge {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+}
+
+.empty a {
+  color: #fbbf24;
+}
+
+.empty a:hover {
+  color: #fcd34d;
+}
+
+.equipmentSection {
+  grid-column: 1 / -1;
+}
+
+.equipmentList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+}
+
+.equipmentItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.equipmentName {
+  flex: 1;
+}
+
+.equipmentRemove {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1;
+  background: rgba(71, 85, 105, 0.4);
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.equipmentRemove:hover {
+  background: rgba(220, 38, 38, 0.2);
+  color: #f87171;
+}
+
+.equipmentAdd {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.equipmentInput {
+  flex: 1;
+  max-width: 280px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(30, 41, 59, 0.6);
+  color: #f1f5f9;
+  font-size: 0.9rem;
+}

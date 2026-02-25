@@ -1,0 +1,298 @@
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page h1 {
+  margin-bottom: 1rem;
+  color: #c9a227;
+}
+
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.progress button {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  background: #2a2a4e;
+  color: #aaa;
+  border: 1px solid #444;
+}
+
+.progress .progActive {
+  background: #3a3a6e;
+  color: #fff;
+}
+
+.section {
+  background: #1e1e2e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  color: #ddd;
+}
+
+.section label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.section input[type="text"],
+.section input[type="number"],
+.section select {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
+}
+
+.abilities select {
+  max-width: 100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.grid button {
+  padding: 0.6rem;
+  text-align: center;
+  background: #2a2a4e;
+  color: #ddd;
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+.grid button.selected {
+  background: #c9a227;
+  color: #1a1a2e;
+  border-color: #c9a227;
+}
+
+.detail {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: #252535;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.abilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.abilities label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bonus {
+  font-size: 0.8rem;
+  color: #7a9cff;
+}
+
+.hint {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.next {
+  background: #c9a227 !important;
+  color: #1a1a2e !important;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.skillGroups {
+  margin-bottom: 1rem;
+}
+
+.skillGroup {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: #252535;
+  border-radius: 8px;
+}
+
+.skillGroup h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: #c9a227;
+}
+
+.skillOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.skillOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0 !important;
+}
+
+.skillOption input {
+  margin: 0 !important;
+  width: auto;
+  max-width: none;
+}
+
+.skillOption input:disabled {
+  cursor: not-allowed;
+}
+
+.skillOption:has(input:disabled) {
+  opacity: 0.6;
+}
+
+.skillOptionLabel {
+  position: relative;
+}
+
+.skillTooltip {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 0.35rem;
+  padding: 0.6rem 0.75rem;
+  max-width: 320px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #ddd;
+  background: #1a1a2e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  white-space: normal;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.skillCount {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.equipmentGroups {
+  margin-bottom: 1rem;
+}
+
+.equipmentGroup {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: #252535;
+  border-radius: 8px;
+}
+
+.equipmentGroup h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: #c9a227;
+  font-weight: 600;
+}
+
+.equipmentOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.equipmentOptions button {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  background: #2a2a4e;
+  color: #ddd;
+  border: 1px solid #444;
+  border-radius: 6px;
+}
+
+.equipmentOptions button.selected {
+  background: #c9a227;
+  color: #1a1a2e;
+  border-color: #c9a227;
+}
+
+.categoryPick {
+  margin-top: 0.75rem;
+}
+
+.categoryPick label {
+  display: block;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.categoryPick select {
+  margin-left: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  min-width: 180px;
+}
+
+.multiPick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.35rem;
+}
+
+.checkLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.checkLabel input {
+  margin: 0 !important;
+  width: auto;
+  max-width: none;
+}

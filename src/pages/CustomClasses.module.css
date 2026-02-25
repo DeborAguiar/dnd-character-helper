@@ -1,0 +1,159 @@
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page h1 {
+  margin-bottom: 0.5rem;
+  color: #c9a227;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.newBtn {
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1rem;
+  background: #c9a227;
+  color: #1a1a2e;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+}
+
+.newBtn:hover {
+  background: #e8c547;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #1e1e2e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  margin-left: 0.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actions button {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.danger {
+  color: #c66;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.form {
+  background: #1e1e2e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.form h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: #ddd;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  padding: 0.4rem 0.75rem;
+  background: #2a2a4e;
+  color: #aaa;
+  border: 1px solid #444;
+}
+
+.tabActive {
+  background: #3a3a6e !important;
+  color: #fff !important;
+}
+
+.section label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.section input,
+.section select {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
+}
+
+.hint {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.levelsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.levelCard {
+  padding: 0.6rem;
+  background: #252535;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.levelCard strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.formActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.saveBtn {
+  background: #c9a227 !important;
+  color: #1a1a2e !important;
+}
