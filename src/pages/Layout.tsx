@@ -1,4 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom'
+import { SHOW_CUSTOM_CLASSES } from '../config'
 import { useCharacter } from '../context/CharacterContext'
 import ErrorBoundary from '../components/ErrorBoundary'
 import styles from './Layout.module.css'
@@ -38,12 +39,14 @@ export default function Layout() {
           >
             Subir de nível
           </Link>
-          <Link
-            to="/custom-classes"
-            className={location.pathname === '/custom-classes' ? styles.active : undefined}
-          >
-            Classes custom
-          </Link>
+          {SHOW_CUSTOM_CLASSES && (
+            <Link
+              to="/custom-classes"
+              className={location.pathname === '/custom-classes' ? styles.active : undefined}
+            >
+              Classes custom
+            </Link>
+          )}
         </div>
         {character.name ? (
           <span className={styles.currentChar}>

@@ -33,8 +33,9 @@ jobs:
       - run: npm run build
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
-          # Personagem de teste: sempre oculto em produção
+          # Personagem de teste e classes customizadas: sempre ocultos em produção
           VITE_SHOW_DEMO_CHARACTER: "false"
+          VITE_SHOW_CUSTOM_CLASSES: "false"
 
       # SPA: 404.html serve o app para rotas como /create, /sheet etc
       - run: cp dist/index.html dist/404.html

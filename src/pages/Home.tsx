@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { SHOW_DEMO_CHARACTER } from '../config'
+import { SHOW_CUSTOM_CLASSES, SHOW_DEMO_CHARACTER } from '../config'
 import { useCharacter } from '../context/CharacterContext'
 import { createDemoCharacter } from '../types/character'
 import styles from './Home.module.css'
@@ -106,13 +106,15 @@ export default function Home() {
           </div>
         )}
 
-        <div className={styles.card}>
-          <h2>Classes customizadas</h2>
-          <p>Defina classes caseiras e use na criação de personagem e no level-up.</p>
-          <Link to="/custom-classes" className={styles.button}>
-            Gerenciar classes
-          </Link>
-        </div>
+        {SHOW_CUSTOM_CLASSES && (
+          <div className={styles.card}>
+            <h2>Classes customizadas</h2>
+            <p>Defina classes caseiras e use na criação de personagem e no level-up.</p>
+            <Link to="/custom-classes" className={styles.button}>
+              Gerenciar classes
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   )

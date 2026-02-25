@@ -4,6 +4,7 @@ import { useCharacter } from '../context/CharacterContext'
 import { getClassLevels, getClass } from '../services/api'
 import type { ClassLevel } from '../types/api'
 import type { LevelUpSnapshot } from '../types/character'
+import { SHOW_DEMO_CHARACTER } from '../config'
 import { createDemoCharacter } from '../types/character'
 import LevelUpBlock from '../components/LevelUpBlock'
 import ErrorBoundary from '../components/ErrorBoundary'
@@ -95,23 +96,27 @@ export default function LevelUp() {
       <div className={styles.page}>
         <h1>Subir de nível</h1>
         <p className={styles.muted}>Crie um personagem e escolha uma classe primeiro.</p>
-        <p className={styles.hint}>
-          Ou carregue um personagem de teste (Mago nível 1 com magias) para experimentar:
-        </p>
-        <button
-          type="button"
-          className={styles.demoBtn}
-          onClick={() => {
-            try {
-              loadCharacter(createDemoCharacter())
-            } catch (e) {
-              console.error('Erro ao carregar personagem de teste:', e)
-              setError(e instanceof Error ? e.message : 'Erro ao carregar personagem de teste')
-            }
-          }}
-        >
-          Carregar personagem de teste
-        </button>
+        {SHOW_DEMO_CHARACTER && (
+          <>
+            <p className={styles.hint}>
+              Ou carregue um personagem de teste (Mago nível 1 com magias) para experimentar:
+            </p>
+            <button
+              type="button"
+              className={styles.demoBtn}
+              onClick={() => {
+                try {
+                  loadCharacter(createDemoCharacter())
+                } catch (e) {
+                  console.error('Erro ao carregar personagem de teste:', e)
+                  setError(e instanceof Error ? e.message : 'Erro ao carregar personagem de teste')
+                }
+              }}
+            >
+              Carregar personagem de teste
+            </button>
+          </>
+        )}
       </div>
     )
   }

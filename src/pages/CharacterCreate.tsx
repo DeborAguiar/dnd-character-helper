@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { SHOW_CUSTOM_CLASSES } from '../config'
 import { useCharacter } from '../context/CharacterContext'
 import { api, getClass, getRace, getSkill, getEquipmentCategory, getClassSpells, getByPath } from '../services/api'
 import type { DndClass, Race } from '../types/api'
@@ -134,7 +135,7 @@ export default function CharacterCreate() {
           setRaces(rRes.results)
           setClasses([
             ...cRes.results.map((x) => ({ ...x, type: 'api' as const })),
-            ...customClasses.map((x) => ({ index: x.id, name: x.name, type: 'custom' as const })),
+            ...(SHOW_CUSTOM_CLASSES ? customClasses.map((x) => ({ index: x.id, name: x.name, type: 'custom' as const })) : []),
           ])
         }
       } finally {
@@ -143,7 +144,7 @@ export default function CharacterCreate() {
     }
     load()
     return () => { cancelled = true }
-  }, [customClasses.length])
+  }, [customClasses.length, SHOW_CUSTOM_CLASSES])
 
   useEffect(() => {
     if (!character.race?.index) {

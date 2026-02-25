@@ -1,13 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { SHOW_CUSTOM_CLASSES } from '../config'
 import { useCharacter } from '../context/CharacterContext'
 import type { CustomClass } from '../types/customClass'
 import { createBlankCustomClass } from '../types/customClass'
 import styles from './CustomClasses.module.css'
 
 export default function CustomClasses() {
+  const navigate = useNavigate()
   const { customClasses, saveCustomClass, deleteCustomClass } = useCharacter()
+
+  useEffect(() => {
+    if (!SHOW_CUSTOM_CLASSES) navigate('/', { replace: true })
+  }, [navigate])
+
   const [editing, setEditing] = useState<CustomClass | null>(null)
   const [showForm, setShowForm] = useState(false)
+
+  if (!SHOW_CUSTOM_CLASSES) return null
 
   const startNew = () => {
     setEditing(createBlankCustomClass())
