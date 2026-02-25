@@ -33,7 +33,11 @@ jobs:
       - run: npm run build
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
+          # Personagem de teste: sempre oculto em produção
           VITE_SHOW_DEMO_CHARACTER: "false"
+
+      # SPA: 404.html serve o app para rotas como /create, /sheet etc
+      - run: cp dist/index.html dist/404.html
 
       - uses: actions/upload-pages-artifact@v4
         with:
