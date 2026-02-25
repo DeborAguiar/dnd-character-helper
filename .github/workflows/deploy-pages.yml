@@ -35,7 +35,7 @@ jobs:
           # Use o nome do repositório; se for outro, ajuste aqui
           VITE_BASE: /${{ github.event.repository.name }}/
 
-      - uses: actions/upload-pages-artifact@3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 
@@ -46,5 +46,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@4
+      - uses: actions/deploy-pages@v4
         id: deploy
