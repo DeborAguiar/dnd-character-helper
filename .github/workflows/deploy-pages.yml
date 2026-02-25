@@ -32,8 +32,8 @@ jobs:
 
       - run: npm run build
         env:
-          # Use o nome do repositório; se for outro, ajuste aqui
           VITE_BASE: /${{ github.event.repository.name }}/
+          VITE_SHOW_DEMO_CHARACTER: "false"
 
       - uses: actions/upload-pages-artifact@v4
         with:
